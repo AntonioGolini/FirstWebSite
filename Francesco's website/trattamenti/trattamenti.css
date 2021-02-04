@@ -1,0 +1,24 @@
+.treatments {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.treatment {
+  display: flex;
+  margin: 1.5rem;
+  flex-wrap: nowrap;
+}
+
+.treatment-description{
+    margin:2rem;
+}
+
+
+@media only screen and (max-width: 60rem) {
+.treatment{
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+}

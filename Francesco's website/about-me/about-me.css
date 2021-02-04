@@ -1,0 +1,26 @@
+.istruzione-formazione {
+  margin: 2rem 4rem;
+  max-width: 60%;
+}
+
+.diploma {
+  line-height: 2rem;
+}
+
+.diploma h1 {
+  color: #e8f5f1;
+}
+
+.diploma h3 {
+  margin: 1.5rem;
+}
+
+.seminars {
+  margin: 1.5rem;
+  list-style-type: none;
+  line-height: 1.75rem;
+}
+
+.seminars li {
+  margin: 1.5rem;
+}
