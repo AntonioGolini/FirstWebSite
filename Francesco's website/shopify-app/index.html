@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../main-page/shared.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>App Shopify - Timbri Personalizzati</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-logo">
+        <img src="../main-page/logofranci.png" href="../main-page/index.html" alt="" />
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav__list-items">
+          <li class="main-nav__list-item">
+            <a href="../main-page/index.html">Home</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="../about-me/index.html">About Me</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="../trattamenti/index.html">Trattamenti</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="../contattami/index.html">Contattami</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="toggle-button">
+        <div class="toggle-button__bar bar-1"></div>
+        <div class="toggle-button__bar bar-2"></div>
+        <div class="toggle-button__bar bar-3"></div>
+      </div>
+    </header>
+
+    <main class="stamp-app">
+      <section class="hero">
+        <div>
+          <p class="hero-tag">App Shopify</p>
+          <h1>Personalizzazione timbri con opzioni a sinistra e backend scalabile</h1>
+          <p>
+            Prototipo di app Shopify per timbri: i clienti personalizzano il layout in
+            tempo reale, mentre tu gestisci oltre 200 campi configurabili dal backend.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <button class="primary">Demo cliente</button>
+          <button class="ghost">Backend amministratore</button>
+        </div>
+      </section>
+
+      <section class="customer-area">
+        <div class="section-header">
+          <h2>Area cliente - personalizzazione timbro</h2>
+          <p>Le opzioni principali sono sempre sulla sinistra, con anteprima centrale.</p>
+        </div>
+        <div class="customer-layout">
+          <aside class="options-panel">
+            <h3>Opzioni timbro</h3>
+            <div class="option-group">
+              <label>Linea testo principale</label>
+              <input type="text" placeholder="Inserisci il testo" />
+            </div>
+            <div class="option-group inline">
+              <div>
+                <label>Font</label>
+                <select>
+                  <option>Arial</option>
+                  <option>Roboto</option>
+                  <option>Montserrat</option>
+                  <option>Times New Roman</option>
+                </select>
+              </div>
+              <div>
+                <label>Dimensione</label>
+                <select>
+                  <option>8 pt</option>
+                  <option>9 pt</option>
+                  <option>10 pt</option>
+                  <option>11 pt</option>
+                  <option>12 pt</option>
+                </select>
+              </div>
+            </div>
+            <div class="option-group inline">
+              <div>
+                <label>Allineamento</label>
+                <div class="align-buttons">
+                  <button class="icon"><i class="fas fa-align-left"></i></button>
+                  <button class="icon active"><i class="fas fa-align-center"></i></button>
+                  <button class="icon"><i class="fas fa-align-right"></i></button>
+                </div>
+              </div>
+              <div>
+                <label>Stile</label>
+                <div class="style-buttons">
+                  <button class="icon"><strong>B</strong></button>
+                  <button class="icon"><em>I</em></button>
+                  <button class="icon"><span>U</span></button>
+                </div>
+              </div>
+            </div>
+            <div class="option-group">
+              <label>Carica logo / immagine</label>
+              <input type="file" />
+            </div>
+            <div class="option-group">
+              <label>Bordo timbro</label>
+              <div class="range-row">
+                <input type="range" min="0" max="10" value="3" />
+                <span>3 px</span>
+              </div>
+            </div>
+            <div class="option-group">
+              <label>Zoom anteprima</label>
+              <div class="range-row">
+                <input type="range" min="50" max="150" value="100" />
+                <span>100%</span>
+              </div>
+            </div>
+            <button class="primary full">Aggiungi riga di testo</button>
+            <button class="ghost full" id="previewButton" type="button">
+              Apri anteprima PDF
+            </button>
+          </aside>
+
+          <div class="preview-panel">
+            <div class="preview-card">
+              <div class="preview-header">
+                <div>
+                  <h3>Timbro Autoinchiostrante Trodat 4907 (13x6mm)</h3>
+                  <p>Anteprima interattiva aggiornata in tempo reale.</p>
+                </div>
+                <button class="ghost">Carica file grafico</button>
+              </div>
+              <div class="preview-canvas">
+                <div class="stamp-placeholder">
+                  <span>Merceria Bianchi</span>
+                  <span>Via A. Moro 25</span>
+                  <span>Con riserva</span>
+                </div>
+              </div>
+              <div class="preview-footer">
+                <div>
+                  <p><strong>Conferma personalizzazione</strong></p>
+                  <p>Accetta la correttezza del testo prima di aggiungere al carrello.</p>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="checkout-card">
+              <div>
+                <h4>Riepilogo</h4>
+                <p>Personalizzazione: 3 righe + logo + bordo</p>
+              </div>
+              <button class="primary">Aggiungi al carrello</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-area">
+        <div class="section-header">
+          <h2>Backend amministratore - gestione 200+ input</h2>
+          <p>Configura rapidamente i campi personalizzati per ogni modello di timbro.</p>
+        </div>
+        <div class="admin-layout">
+          <div class="builder-panel">
+            <h3>Crea nuovo input</h3>
+            <form id="fieldForm">
+              <div class="option-group">
+                <label>Nome campo</label>
+                <input type="text" name="label" placeholder="Es. Riga 1" required />
+              </div>
+              <div class="option-group inline">
+                <div>
+                  <label>Tipo</label>
+                  <select name="type">
+                    <option value="text">Testo</option>
+                    <option value="textarea">Area testo</option>
+                    <option value="select">Selettore</option>
+                    <option value="upload">Upload</option>
+                    <option value="toggle">Toggle</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Max caratteri</label>
+                  <input type="number" name="max" value="20" min="1" />
+                </div>
+              </div>
+              <div class="option-group inline">
+                <div>
+                  <label>Prezzo extra</label>
+                  <input type="number" name="price" value="0" min="0" step="0.5" />
+                </div>
+                <div class="toggle-row">
+                  <label>Obbligatorio</label>
+                  <input type="checkbox" name="required" checked />
+                </div>
+              </div>
+              <button class="primary full" type="submit">Salva input</button>
+            </form>
+            <div class="builder-info">
+              <p><strong>Workflow consigliato</strong></p>
+              <ul>
+                <li>Clona un set di campi per ogni formato timbro.</li>
+                <li>Definisci regole di validazione e anteprima.</li>
+                <li>Abilita/disabilita campi in base alle varianti Shopify.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="fields-panel">
+            <div class="fields-header">
+              <div>
+                <h3>Campi configurati</h3>
+                <p><span id="fieldCount">0</span> input disponibili per la personalizzazione.</p>
+              </div>
+              <button class="ghost">Esporta configurazione</button>
+            </div>
+            <div id="fieldsList" class="fields-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="modal" id="previewModal" aria-hidden="true">
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="previewTitle">
+          <div class="modal-header">
+            <h3 id="previewTitle">Anteprima PDF</h3>
+            <button class="icon" id="closePreview" type="button">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="pdf-preview">
+              <p>Timbro Autoinchiostrante Trodat 4907</p>
+              <div class="stamp-placeholder">
+                <span>Merceria Bianchi</span>
+                <span>Via A. Moro 25</span>
+                <span>Con riserva</span>
+              </div>
+            </div>
+            <p class="modal-note">
+              L'anteprima PDF definitiva viene generata dal backend Shopify dopo il salvataggio
+              della configurazione del cliente.
+            </p>
+          </div>
+          <div class="modal-actions">
+            <button class="primary" id="downloadPreview" type="button">
+              Scarica file demo
+            </button>
+            <button class="ghost" id="closePreviewSecondary" type="button">Chiudi</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="social-media__contacts">
+        <ul>
+          <li><i class="fab fa-whatsapp"></i> +393389425349</li>
+          <li><i class="fab fa-facebook-f"></i> Lorem, ipsum dolor.</li>
+          <li><i class="fab fa-instagram"></i> Lorem, ipsum dolor.</li>
+          <li><i class="fas fa-at"></i></li>
+        </ul>
+      </div>
+      <div class="map">
+        <div class="bar"></div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1450.4890193669585!2d13.698248637879981!3d43.3565699704585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13327173e2c7c7d7%3A0x40ddccc702181387!2sStudio%20Osteopatico%20-%20Francesco%20Senigagliesi%20D.O.!5e0!3m2!1sen!2sit!4v1612262545346!5m2!1sen!2sit"
+          width="350"
+          height="250"
+          frameborder="0"
+          style="border: 0"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+        ></iframe>
+      </div>
+      <div id="mySidenav" class="sidenav">
+        <a href="#" id="about"><i class="fas fa-arrow-circle-up"></i></a>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
